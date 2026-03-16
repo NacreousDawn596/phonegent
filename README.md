@@ -1,5 +1,7 @@
 # PhoneGent
 
+_still under development._
+
 **A fully local AI agent running on your Android phone via Termux.**  
 Ollama LLM + FastAPI backend + React Native frontend. No cloud. No API keys. Full hardware control.
 
@@ -106,7 +108,7 @@ phonegent/
 ```bash
 # 1. Clone or copy the project into Termux
 cd ~
-git clone https://github.com/you/phonegent
+git clone https://github.com/NacreousDawn596/phonegent
 cd phonegent
 
 # 2. Run the install script (downloads Ollama + models + Python deps)
@@ -266,7 +268,7 @@ The system prompt enforces this — the agent will always ask before calling the
 - Try `curl http://YOUR_IP:8000/health` from another device
 
 **Ollama is slow:**
-- Use a smaller model: `phi3:mini` or `tinyllama`
+- Use a smaller model: `phi3:mini`, `qwen3.5:0.8b` or `tinyllama`
 - Close other apps to free RAM
 - Enable `termux-wake-lock` to prevent CPU throttling
 
@@ -276,8 +278,8 @@ The system prompt enforces this — the agent will always ask before calling the
 - Test manually: `termux-battery-status` in Termux
 
 **Vision doesn't work:**
-- Run: `ollama pull llava`
-- Set `OLLAMA_VISION_MODEL=llava` in `.env`
+- Run: `ollama pull qwen3.5:0.8b`
+- Set `OLLAMA_VISION_MODEL=qwen3.5:0.8b` in `.env`
 
 ---
 
