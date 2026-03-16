@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "PhoneGent",
+    "slug": "phonegent",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "phonegent",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#09090b"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#09090b"
+      },
+      "package": "com.phonegent.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_SMS",
+        "SEND_SMS",
+        "READ_CALL_LOG",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE",
+        "FLASHLIGHT",
+        "CHANGE_NETWORK_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-av",
+      [
+        "expo-camera",
+        { "cameraPermission": "Allow PhoneGent to access the camera." }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
