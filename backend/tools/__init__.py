@@ -55,21 +55,9 @@ async def get_battery_status(_: dict = {}) -> dict:
     """Returns battery percentage, health, temperature, and charging status."""
     return await _arun(["termux-battery-status"])
 
-
-async def get_wifi_scan(_: dict = {}) -> dict:
-    """Scans nearby WiFi networks and returns SSIDs, BSSIDs, and signal levels."""
-    return await _arun(["termux-wifi-scaninfo"])
-
-
 async def get_device_info(_: dict = {}) -> dict:
     """Returns device model, manufacturer, Android version, and unique ID."""
     return await _arun(["termux-telephony-deviceinfo"])
-
-
-async def get_cell_info(_: dict = {}) -> dict:
-    """Returns cellular tower information including carrier and signal strength."""
-    return await _arun(["termux-telephony-cellinfo"])
-
 
 # ──────────────────────────────────────────────────────────
 # LOCATION
@@ -326,19 +314,9 @@ TOOL_REGISTRY: dict[str, dict] = {
         "description": "Returns battery percentage, temperature, health, and charging status of the phone.",
         "parameters": {"type": "object", "properties": {}, "required": []},
     },
-    "get_wifi_scan": {
-        "fn": get_wifi_scan,
-        "description": "Scans and returns nearby WiFi networks with their SSIDs and signal strength.",
-        "parameters": {"type": "object", "properties": {}, "required": []},
-    },
     "get_device_info": {
         "fn": get_device_info,
         "description": "Returns device model, manufacturer, and system information.",
-        "parameters": {"type": "object", "properties": {}, "required": []},
-    },
-    "get_cell_info": {
-        "fn": get_cell_info,
-        "description": "Returns cellular network and carrier information.",
         "parameters": {"type": "object", "properties": {}, "required": []},
     },
     # ── Location ──

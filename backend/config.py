@@ -13,8 +13,8 @@ class Settings(BaseSettings):
 
     # Ollama
     OLLAMA_HOST: str = "http://localhost:11434"
-    OLLAMA_MODEL: str = "llama3"           # swap to any local model
-    OLLAMA_VISION_MODEL: str = "llava"     # used for image analysis
+    OLLAMA_MODEL: str = "qwen3.5:0.8b"           # swap to any local model
+    OLLAMA_VISION_MODEL: str = "qwen3.5:0.8b"     # used for image analysis
     OLLAMA_TIMEOUT: int = 120
 
     # Database
